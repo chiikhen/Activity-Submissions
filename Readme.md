@@ -12,7 +12,7 @@ For video instruction, you can refer to this vidoes:
 Before submitting any activities, especially if it is your first time, please do the following:
 1. Fork this repository
 2. Clone the repository in your local device 
-3. Once clone, create a new folder with the name "FULL_NAME" (all caps, no spaces, _ as the delimiter), i.e. TOPE_MATEO
+3. Once clone, create a new folder with the name "FULL_NAME" (last name, first name, all caps, no spaces, _ as the delimiter), i.e. MATEO_JOHN_CRISTOPHER
 
 Every time you submit a coding activity, make sure to the following:
 
