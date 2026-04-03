@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Exercise2_musicplayer" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- YouTube Music style colors -->
+        <item name="colorPrimary">#FF4444</item>
+        <item name="colorPrimaryDark">#0F0F0F</item>
+        <item name="colorAccent">#FF4444</item>
+        <item name="android:statusBarColor">#0F0F0F</item>
+        <item name="android:navigationBarColor">#0F0F0F</item>
+        <item name="android:windowBackground">#0F0F0F</item>
+    </style>
+</resources>
