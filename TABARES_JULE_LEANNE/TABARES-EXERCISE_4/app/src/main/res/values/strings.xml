@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Leanne Music Player</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="profile">Profile</string>
+    <string name="my_music">My Music</string>
+    <string name="favorites">Favorites</string>
+    <string name="favorite_songs">Favorite Songs</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="profile_full_name">Jule Leanne Tabares</string>
+    <string name="profile_title">My Profile</string>
+    <string name="profile_subtitle">Student details and interests</string>
+    <string name="profile_kicker">STUDENT PROFILE</string>
+    <string name="profile_tagline">Music, coding, and reading</string>
+    <string name="profile_about_title">About</string>
+    <string name="profile_about_body">BSIT student from Section 3A with a love for music, coding, and reading.</string>
+    <string name="profile_interests_title">Interests</string>
+    <string name="profile_course_label">Course</string>
+    <string name="profile_section_label">Section</string>
+    <string name="profile_course_value">BSIT</string>
+    <string name="profile_section_value">3A</string>
+    <string name="profile_music_chip">Music</string>
+    <string name="profile_coding_chip">Coding</string>
+    <string name="profile_reading_chip">Reading</string>
+    <string name="empty_player_title">Choose a song to start</string>
+</resources>

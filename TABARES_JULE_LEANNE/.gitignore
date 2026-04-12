@@ -1,0 +1,7 @@
+# Gradle/Android build outputs and caches
+**/.gradle-user/
+**/.gradle/
+**/build/
+**/.idea/
+**/*.iml
+**/local.properties
