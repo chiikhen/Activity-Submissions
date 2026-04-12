@@ -1,9 +1,25 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Exercise2_musicplayer" parent="Theme.Material3.DayNight">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<resources>
+    <style name="Theme.Exercise2_musicplayer" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/spotify_green</item>
+        <item name="colorPrimaryDark">@color/spotify_black</item>
+        <item name="colorAccent">@color/spotify_green</item>
+        <item name="android:windowBackground">@color/spotify_black</item>
+        <item name="android:statusBarColor">@color/spotify_black</item>
+        <item name="android:navigationBarColor">@color/spotify_black</item>
+        <item name="colorSurface">@color/spotify_dark_gray</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="bottomNavigationStyle">@style/SpotifyBottomNav</item>
+        <item name="toolbarStyle">@style/SpotifyToolbar</item>
     </style>
 
-    <style name="Theme.Exercise2_musicplayer" parent="Base.Theme.Exercise2_musicplayer" />
+    <style name="SpotifyToolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/spotify_black</item>
+        <item name="titleTextColor">@color/white</item>
+    </style>
+
+    <style name="SpotifyBottomNav" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:background">@color/spotify_black</item>
+        <item name="itemIconTint">@color/bottom_nav_color</item>
+        <item name="itemTextColor">@color/bottom_nav_color</item>
+    </style>
 </resources>
