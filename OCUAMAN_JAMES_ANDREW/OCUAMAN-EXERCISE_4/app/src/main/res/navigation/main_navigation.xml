@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/myMusicFragment">
+
+    <fragment
+        android:id="@+id/myMusicFragment"
+        android:name="com.example.exercise_2_music_player.MyMusicFragment"
+        android:label="@string/menu_my_music" />
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.exercise_2_music_player.FavoritesFragment"
+        android:label="@string/menu_favorites" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.exercise_2_music_player.ProfileFragment"
+        android:label="@string/menu_profile" />
+
+</navigation>

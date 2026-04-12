@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawer_now_playing"
+            android:icon="@drawable/ic_queue_music_24"
+            android:title="@string/menu_now_playing" />
+        <item
+            android:id="@+id/drawer_profile"
+            android:icon="@drawable/ic_account_circle_24"
+            android:title="@string/menu_profile" />
+    </group>
+</menu>
