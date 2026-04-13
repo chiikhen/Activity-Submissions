@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="songsListView" type="id" />
+    <item name="navView" type="id" />
+    <item name="nav_host_fragment" type="id" />
+    <item name="player_container" type="id" />
+    <item name="bottomNavView" type="id" />
+    <item name="toolbar" type="id" />
+</resources>
