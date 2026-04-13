@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_now_playing">
+
+    <!-- Drawer destinations -->
+    <fragment
+        android:id="@+id/nav_now_playing"
+        android:name="com.example.exercise_2_music_player.NowPlayingFragment"
+        android:label="Now Playing"
+        tools:layout="@layout/fragment_now_playing">
+        <argument
+            android:name="songData"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.exercise_2_music_player.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <!-- Bottom nav destinations (nested inside Now Playing conceptually) -->
+    <fragment
+        android:id="@+id/nav_my_music"
+        android:name="com.example.exercise_2_music_player.MyMusicFragment"
+        android:label="My Music"
+        tools:layout="@layout/fragment_my_music" />
+
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.example.exercise_2_music_player.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites" />
+
+</navigation>

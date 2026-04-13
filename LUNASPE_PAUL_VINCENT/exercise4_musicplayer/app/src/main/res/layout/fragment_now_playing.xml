@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0F0F0F">
+
+    <!-- Song List -->
+    <ListView
+        android:id="@+id/songsListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#0F0F0F"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="4dp" />
+
+    <!-- Embedded Player -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#1A1A1A"
+        android:gravity="center_horizontal"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a song"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:paddingHorizontal="16dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="8dp">
+
+            <ImageButton
+                android:id="@+id/previousButton"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:contentDescription="Previous"
+                android:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/stopButton"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@android:drawable/ic_delete"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:contentDescription="Stop"
+                android:layout_marginStart="12dp"
+                android:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/playButton"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@android:drawable/ic_media_play"
+                android:background="#FF4444"
+                android:scaleType="centerInside"
+                android:layout_marginHorizontal="12dp"
+                android:contentDescription="Play"
+                android:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/pauseButton"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@android:drawable/ic_media_pause"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:contentDescription="Pause"
+                android:layout_marginEnd="12dp"
+                android:tint="#FFFFFF" />
+
+            <ImageButton
+                android:id="@+id/nextButton"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@android:drawable/ic_media_next"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:contentDescription="Next"
+                android:tint="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
