@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">exercise-3_music-player</string>
+    <string name="my_song_text">My Song</string>
+    <string name="select_a_song_text">Select a Song</string>
+    <string name="prev_text">Prev</string>
+    <string name="next_text">Next</string>
+    <string name="play_text">Play</string>
+    <string name="pause_text">Pause</string>
+    <string name="stop_text">Stop</string>
+
+</resources>

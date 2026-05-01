@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_purple_gradient"
+    tools:context=".MainActivity">
+
+    <!-- List Fragment Container (Full screen) -->
+    <FrameLayout
+        android:id="@+id/listFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/playerFragmentContainer" />
+
+    <!-- Player Fragment Container (Bottom, compact, always visible) -->
+    <FrameLayout
+        android:id="@+id/playerFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="visible"
+        android:elevation="8dp" />
+
+</RelativeLayout>

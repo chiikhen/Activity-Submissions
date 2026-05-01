@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="app_label_caps">MUSIC PLAYER</string>
+
+    <!-- Main Activity -->
+    <string name="header_title">My Library</string>
+    <string name="header_subtitle">Select a track to start listening</string>
+    <string name="playlist_title">My Playlist</string>
+    <string name="song_count">%d songs</string>
+
+    <!-- Manage Song Activity -->
+    <string name="now_playing">Now Playing</string>
+    <string name="song_title_placeholder">Song Title</string>
+    <string name="artist_placeholder">Unknown Artist</string>
+    <string name="status_ready">Ready to play</string>
+    <string name="status_playing">Now Playing</string>
+    <string name="status_paused">Paused</string>
+    <string name="status_stopped">Stopped</string>
+    <string name="status_buffering">Loading…</string>
+    <string name="status_ready_play">Ready</string>
+    <string name="status_finished">Finished</string>
+    <string name="time_zero">0:00</string>
+
+    <!-- Button descriptions -->
+    <string name="btn_play">Play</string>
+    <string name="btn_pause">Pause</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_previous">Previous</string>
+    <string name="btn_next">Next</string>
+    <string name="album_art_description">Album Art</string>
+    <string name="play_icon_description">Play song</string>
+</resources>

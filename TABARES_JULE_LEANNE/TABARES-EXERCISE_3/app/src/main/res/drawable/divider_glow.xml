@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Soft glow behind -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="0"
+                android:startColor="#00000000"
+                android:centerColor="#40FF1493"
+                android:endColor="#00000000"
+                android:type="linear" />
+            <size android:height="4dp" />
+        </shape>
+    </item>
+    <!-- Crisp pink line -->
+    <item
+        android:top="1dp"
+        android:bottom="1dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF1493" />
+            <size android:height="2dp" />
+        </shape>
+    </item>
+</layer-list>

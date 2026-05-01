@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_player_aesthetic">
+
+    <!-- Subtle gradient overlay -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_player_gradient"
+        android:alpha="0.5" />
+
+    <!-- ══════════ No Song State ══════════ -->
+    <LinearLayout
+        android:id="@+id/noSongText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <!-- Decorative music icon -->
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="12dp">
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/circle_pink_ring" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="♪"
+                android:textSize="32sp"
+                android:textColor="#50FF1493" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select a track"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:letterSpacing="0.02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap a song above to start playing"
+            android:textSize="12sp"
+            android:textColor="@color/text_tertiary"
+            android:layout_marginTop="6dp" />
+    </LinearLayout>
+
+    <!-- ══════════ Player State ══════════ -->
+    <LinearLayout
+        android:id="@+id/playerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="6dp">
+
+        <!-- ── Top Row: NOW PLAYING label + Favorite ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="6dp">
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="14dp"
+                android:background="@color/primary_pink"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="NOW PLAYING"
+                android:textSize="10sp"
+                android:textColor="@color/primary_pink"
+                android:textStyle="bold"
+                android:letterSpacing="0.2" />
+
+            <TextView
+                android:id="@+id/favoriteButton"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:text="♡"
+                android:textSize="20sp"
+                android:textColor="@color/primary_pink"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <!-- ── Song Title ── -->
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Song Title"
+            android:textSize="20sp"
+            android:textColor="@color/text_primary"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:letterSpacing="0.01" />
+
+        <!-- ── Artist Name ── -->
+        <TextView
+            android:id="@+id/songStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Artist Name"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="2dp"
+            android:alpha="0.85" />
+
+        <!-- ── Visualizer / Album Art Area ── -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp">
+
+            <!-- Glow background -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_visualizer_glow"
+                android:alpha="0.6" />
+
+            <!-- Decorative waveform bars -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical|center_horizontal"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <View android:layout_width="3dp" android:layout_height="18dp" android:background="@color/primary_pink" android:alpha="0.3" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="30dp" android:background="@color/primary_pink" android:alpha="0.45" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="50dp" android:background="@color/primary_pink" android:alpha="0.6" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="35dp" android:background="@color/primary_pink" android:alpha="0.5" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="60dp" android:background="@color/primary_pink" android:alpha="0.7" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="45dp" android:background="@color/primary_pink" android:alpha="0.55" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="70dp" android:background="@color/primary_pink" android:alpha="0.8" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="55dp" android:background="@color/primary_pink" android:alpha="0.65" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="40dp" android:background="@color/primary_pink" android:alpha="0.5" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="65dp" android:background="@color/primary_pink" android:alpha="0.75" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="50dp" android:background="@color/primary_pink" android:alpha="0.6" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="35dp" android:background="@color/primary_pink" android:alpha="0.45" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="55dp" android:background="@color/primary_pink" android:alpha="0.65" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="70dp" android:background="@color/primary_pink" android:alpha="0.8" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="45dp" android:background="@color/primary_pink" android:alpha="0.55" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="60dp" android:background="@color/primary_pink" android:alpha="0.7" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="38dp" android:background="@color/primary_pink" android:alpha="0.5" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="25dp" android:background="@color/primary_pink" android:alpha="0.4" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="50dp" android:background="@color/primary_pink" android:alpha="0.6" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="42dp" android:background="@color/primary_pink" android:alpha="0.5" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="60dp" android:background="@color/primary_pink" android:alpha="0.7" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="30dp" android:background="@color/primary_pink" android:alpha="0.4" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="48dp" android:background="@color/primary_pink" android:alpha="0.55" android:layout_marginEnd="3dp"/>
+                <View android:layout_width="3dp" android:layout_height="20dp" android:background="@color/primary_pink" android:alpha="0.3" />
+            </LinearLayout>
+
+            <!-- Center music note overlay -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="♪"
+                android:textSize="48sp"
+                android:textColor="@color/primary_pink"
+                android:alpha="0.12" />
+        </FrameLayout>
+
+        <!-- ── Time Labels ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="00:00"
+                android:textSize="11sp"
+                android:textColor="@color/text_tertiary"
+                android:fontFamily="monospace" />
+
+            <TextView
+                android:id="@+id/totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="11sp"
+                android:textColor="@color/text_tertiary"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+
+        <!-- ── SeekBar ── -->
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="28dp"
+            android:progressTint="@color/primary_pink"
+            android:thumbTint="@color/primary_pink"
+            android:progressBackgroundTint="#40FF1493"
+            android:max="100"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp" />
+
+        <!-- ── Controls ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="2dp">
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+            <!-- Previous -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/prevButton"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:text="⏮︎"
+                    android:textSize="20sp"
+                    android:textColor="@color/light_pink"
+                    android:gravity="center"
+                    android:background="@drawable/bg_control_button"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </FrameLayout>
+
+            <!-- Play / Pause — big center button -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.3">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_play_button">
+
+                    <TextView
+                        android:id="@+id/pauseButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="❚❚"
+                        android:textSize="18sp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/playButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="▶"
+                        android:textSize="20sp"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </FrameLayout>
+            </FrameLayout>
+
+            <!-- Next -->
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/nextButton"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center"
+                    android:text="⏭︎"
+                    android:textSize="20sp"
+                    android:textColor="@color/light_pink"
+                    android:gravity="center"
+                    android:background="@drawable/bg_control_button"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </FrameLayout>
+
+            <!-- Spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+

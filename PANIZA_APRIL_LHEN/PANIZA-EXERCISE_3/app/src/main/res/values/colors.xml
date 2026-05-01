@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- === Modern Music Player Palette === -->
+    <!-- Primary Brand Color - Deep Teal -->
+    <color name="primary">#1FBBAA</color>
+    <color name="primary_dark">#158A7C</color>
+    <color name="primary_container">#0D3D38</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_primary_container">#A8F0E8</color>
+
+    <!-- Accent / Secondary -->
+    <color name="accent">#1FBBAA</color>
+    <color name="accent_soft">#A8F0E8</color>
+
+    <!-- Backgrounds - Deep Dark -->
+    <color name="background_dark">#0A0E14</color>
+    <color name="surface_dark">#111827</color>
+    <color name="surface_variant">#1A2332</color>
+    <color name="card_background">#1A2332</color>
+    <color name="card_background_elevated">#1F2B3E</color>
+    <color name="bottom_bar_bg">#0D1520</color>
+
+    <!-- Text -->
+    <color name="text_primary">#F0F4F8</color>
+    <color name="text_secondary">#8899AA</color>
+    <color name="text_disabled">#445566</color>
+
+    <!-- Player Controls -->
+    <color name="play_button">#1FBBAA</color>
+    <color name="play_button_pressed">#17A090</color>
+    <color name="control_button">#1F2B3E</color>
+    <color name="control_button_pressed">#263547</color>
+
+    <!-- Progress / Seek Bar -->
+    <color name="progress_track">#2A3A50</color>
+    <color name="progress_indicator">#1FBBAA</color>
+    <color name="progress_thumb">#1FBBAA</color>
+
+    <!-- Album Art Gradient -->
+    <color name="gradient_start">#1FBBAA</color>
+    <color name="gradient_mid">#0D6E8A</color>
+    <color name="gradient_end">#0A3D5C</color>
+
+    <!-- Divider / Border -->
+    <color name="divider">#1E2E42</color>
+    <color name="ripple_color">#331FBBAA</color>
+
+    <!-- Active / Highlight -->
+    <color name="active_song_bg">#0D3D38</color>
+    <color name="active_song_indicator">#1FBBAA</color>
+</resources>

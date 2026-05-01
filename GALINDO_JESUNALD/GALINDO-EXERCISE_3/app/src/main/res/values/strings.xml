@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Exercise 2 Music Player</string>
+
+    <string name="status_buffering">Status: Buffering....</string>
+    <string name="status_ready">Status: Ready</string>
+    <string name="status_idle">Status: Idle</string>
+    <string name="status_ended">Status: Ended</string>
+    <string name="status_playing">Status: Playing</string>
+    <string name="status_paused">Status: Paused</string>
+</resources>

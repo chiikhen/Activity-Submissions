@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_dark"
+    android:gravity="center_horizontal">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/now_playing"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.05" />
+
+    </LinearLayout>
+
+    <!-- Album Art -->
+    <FrameLayout
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/album_art_large"
+        android:elevation="16dp">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_music_note"
+            android:contentDescription="@string/album_art_description"
+            app:tint="@color/white" />
+
+    </FrameLayout>
+
+    <!-- Song Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="32dp">
+
+        <TextView
+            android:id="@+id/songTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/song_title_placeholder"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/songStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/status_ready"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Progress Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="32dp"
+        android:layout_marginTop="32dp">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/progress_indicator"
+            android:progressBackgroundTint="@color/progress_track"
+            android:thumbTint="@color/progress_indicator"
+            android:max="100"
+            android:progress="0" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/currentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_zero"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/totalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time_zero"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Control Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="32dp">
+
+        <!-- Stop Button -->
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/control_button_bg"
+            android:src="@drawable/ic_stop"
+            android:scaleType="center"
+            android:contentDescription="@string/btn_stop"
+            app:tint="@color/white" />
+
+        <!-- Play Button (Main - Larger) -->
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginHorizontal="24dp"
+            android:background="@drawable/play_button_bg"
+            android:src="@drawable/ic_play_arrow"
+            android:scaleType="center"
+            android:contentDescription="@string/btn_play"
+            android:elevation="8dp"
+            app:tint="@color/white" />
+
+        <!-- Pause Button -->
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/control_button_bg"
+            android:src="@drawable/ic_pause"
+            android:scaleType="center"
+            android:contentDescription="@string/btn_pause"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

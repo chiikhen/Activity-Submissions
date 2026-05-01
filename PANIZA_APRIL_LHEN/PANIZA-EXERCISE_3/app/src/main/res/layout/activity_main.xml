@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".MainActivity">
+
+    <!-- Song List Fragment — fills all available space -->
+    <FrameLayout
+        android:id="@+id/songListContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="140dp" />
+
+    <!-- Music Player Fragment — elevated bottom panel -->
+    <FrameLayout
+        android:id="@+id/musicPlayerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom_player_bg"
+        android:elevation="16dp"
+        app:layout_anchorGravity="bottom" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

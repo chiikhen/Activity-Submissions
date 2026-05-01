@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0F0F0F"
+    tools:context=".MainActivity">
+
+    <!-- Song List Fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/songListFragmentContainer"
+        android:name="com.example.exercise_2_music_player.SongListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Player Fragment -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/playerFragmentContainer"
+        android:name="com.example.exercise_2_music_player.MusicPlayerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

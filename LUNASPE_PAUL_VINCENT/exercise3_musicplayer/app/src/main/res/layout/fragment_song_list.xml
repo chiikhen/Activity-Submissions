@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0F0F0F">
+
+    <!-- Simple Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Music"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:padding="20dp"
+        android:fontFamily="sans-serif" />
+
+    <!-- Songs List -->
+    <ListView
+        android:id="@+id/songsListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#0F0F0F"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="4dp" />
+
+</LinearLayout>

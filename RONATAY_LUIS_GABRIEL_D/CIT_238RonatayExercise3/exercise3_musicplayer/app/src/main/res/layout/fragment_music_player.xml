@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/apple_music_background"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingHorizontal="24dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_gallery"
+                android:background="@color/apple_music_card" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/playerSongTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No song selected"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
+        <TextView
+            android:id="@+id/playerSongStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select a song to play"
+            android:textSize="14sp"
+            android:textColor="@color/apple_music_secondary_text"
+            android:textAlignment="center"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingBottom="16dp">
+
+        <SeekBar
+            android:id="@+id/playerSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/apple_music_red"
+            android:thumbTint="@color/apple_music_red"
+            android:progressBackgroundTint="@color/apple_music_divider"
+            android:max="100"
+            android:progress="0"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:minHeight="4dp"
+            android:maxHeight="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/playerCurrentTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0:00"
+                android:textColor="@color/apple_music_secondary_text"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/playerTotalTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-0:00"
+                android:textColor="@color/apple_music_secondary_text"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="12dp">
+
+            <ImageButton
+                android:id="@+id/playerPrevButton"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_media_previous"
+                android:contentDescription="Previous"
+                app:tint="@color/white"
+                android:scaleType="fitCenter"
+                android:padding="14dp" />
+
+            <ImageButton
+                android:id="@+id/playerPlayButton"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@drawable/apple_music_play_button"
+                android:src="@android:drawable/ic_media_play"
+                android:contentDescription="Play"
+                app:tint="@color/white"
+                android:scaleType="fitCenter"
+                android:padding="16dp" />
+
+            <ImageButton
+                android:id="@+id/playerPauseButton"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_media_pause"
+                android:contentDescription="Pause"
+                app:tint="@color/white"
+                android:scaleType="fitCenter"
+                android:padding="14dp" />
+
+            <ImageButton
+                android:id="@+id/playerNextButton"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_media_next"
+                android:contentDescription="Next"
+                app:tint="@color/white"
+                android:scaleType="fitCenter"
+                android:padding="14dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

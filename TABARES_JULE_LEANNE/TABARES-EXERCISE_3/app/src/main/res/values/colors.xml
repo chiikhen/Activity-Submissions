@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Pink Aesthetic Palette -->
+    <color name="primary_pink">#FF1493</color>
+    <color name="hot_pink">#FF69B4</color>
+    <color name="light_pink">#FFB6D9</color>
+    <color name="soft_pink">#FFCCE5</color>
+    <color name="dark_pink">#C71585</color>
+    <color name="deep_rose">#8B0A50</color>
+
+    <!-- Aesthetic Backgrounds — deep burgundy/wine tones instead of pure black -->
+    <color name="dark_background">#1A0A12</color>
+    <color name="dark_surface">#2A1020</color>
+    <color name="dark_card">#321428</color>
+    <color name="card_overlay">#3D1A30</color>
+    <color name="surface_pink_glass">#30FF1493</color>
+
+    <!-- Text -->
+    <color name="text_primary">#FFF0F5</color>
+    <color name="text_secondary">#FFB6D9</color>
+    <color name="text_tertiary">#AA7090</color>
+
+    <!-- Accents -->
+    <color name="accent_glow">#60FF1493</color>
+    <color name="accent_blue">#5E92F3</color>
+    <color name="accent_purple">#DA70D6</color>
+    <color name="accent_pink">#FF1493</color>
+
+    <color name="primary_purple">#DA70D6</color>
+    <color name="dark_purple">#C71585</color>
+    <color name="spotify_green">#FF1493</color>
+    <color name="spotify_dark_green">#C71585</color>
+    <color name="spotify_light_green">#FFB6D9</color>
+</resources>

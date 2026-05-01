@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="8dp"
+    card_view:cardBackgroundColor="#D6FFC1">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:gravity="center_horizontal">
+
+        <!-- Song Title -->
+        <TextView
+            android:id="@+id/songTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Song Title"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:textAlignment="center"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:textAlignment="center"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Play / Pause / Stop Buttons -->
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/prevButton"
+                android:layout_width="54dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@null"
+                android:contentDescription="Previous"
+                android:src="@drawable/ic_previous"
+                android:tint="#000000" />
+
+            <ImageButton
+                android:id="@+id/pauseButton"
+                android:layout_width="52dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@null"
+                android:contentDescription="Pause"
+                android:src="@drawable/ic_pause"
+                android:tint="#000000" />
+
+            <ImageButton
+                android:id="@+id/playButton"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@null"
+                android:contentDescription="Play"
+                android:src="@drawable/ic_play"
+                android:tint="#1DB954" />
+
+            <ImageButton
+                android:id="@+id/stopButton"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@null"
+                android:contentDescription="Stop"
+                android:src="@drawable/ic_stop"
+                android:tint="#000000" />
+
+            <ImageButton
+                android:id="@+id/nextButton"
+                android:layout_width="53dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@null"
+                android:contentDescription="Next"
+                android:src="@drawable/ic_next"
+                android:tint="#000000" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

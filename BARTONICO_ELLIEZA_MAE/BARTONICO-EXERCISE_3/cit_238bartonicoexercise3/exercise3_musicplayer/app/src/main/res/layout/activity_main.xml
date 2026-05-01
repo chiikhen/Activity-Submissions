@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Fragment 1: The Music List -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/list_container"
+        android:name="com.example.exercise_2_music_player.SongListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Fragment 2: The Music Player -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/player_container"
+        android:name="com.example.exercise_2_music_player.ManageSong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

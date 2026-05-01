@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:gravity="center_vertical">
+
+    <!-- Glass-style card wrapper for the whole item -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_song_item"
+        android:padding="10dp"
+        android:gravity="center_vertical">
+
+        <!-- Album Art — ImageView with placeholder -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/primary_pink">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- Placeholder background -->
+                <ImageView
+                    android:id="@+id/albumArt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Album Art"
+                    android:src="@drawable/placeholder_album_art" />
+
+                <!-- Music note overlay (visible when no image set) -->
+                <TextView
+                    android:id="@+id/albumArtNote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="♪"
+                    android:textSize="22sp"
+                    android:textColor="#CCFFFFFF"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Song info -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/songNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Song Name"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <TextView
+                android:id="@+id/songArtistText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artist"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="3dp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+        </LinearLayout>
+
+        <!-- Duration + play icon -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3:45"
+                android:textColor="@color/text_tertiary"
+                android:textSize="11sp"
+                android:layout_marginEnd="10dp" />
+
+            <TextView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:text="▶"
+                android:textSize="12sp"
+                android:textColor="@color/hot_pink"
+                android:gravity="center"
+                android:background="@drawable/bg_control_button" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

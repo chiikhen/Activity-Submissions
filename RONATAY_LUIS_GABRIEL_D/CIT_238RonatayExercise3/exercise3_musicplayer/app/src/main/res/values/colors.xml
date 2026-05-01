@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="apple_music_red">#FA2D48</color>
+    <color name="apple_music_background">#000000</color>
+    <color name="apple_music_card">#1C1C1E</color>
+    <color name="apple_music_secondary_text">#8E8E93</color>
+    <color name="apple_music_divider">#38383A</color>
+</resources>
