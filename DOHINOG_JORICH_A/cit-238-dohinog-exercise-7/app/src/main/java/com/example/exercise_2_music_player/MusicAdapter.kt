@@ -11,6 +11,7 @@ import com.example.exercise_2_music_player.databinding.ItemSongBinding
 class MusicAdapter(
     private val onSongClick: (Song) -> Unit,
     private val onFavoriteClick: (Song) -> Unit
+    //comment
 ) : ListAdapter<Song, MusicAdapter.MusicViewHolder>(SongDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MusicViewHolder {
