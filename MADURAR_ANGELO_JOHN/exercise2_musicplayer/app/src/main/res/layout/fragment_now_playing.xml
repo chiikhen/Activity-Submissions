@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/spotify_black"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/songTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select a song"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/statusTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status: Idle"
+        android:textColor="@color/spotify_text_gray"
+        android:textSize="13sp"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Progress bar -->
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressTint="@color/spotify_green"
+        android:thumbTint="@color/white"
+        android:paddingBottom="16dp"/>
+
+    <!-- Controls row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="20dp">
+
+        <ImageButton
+            android:id="@+id/previousButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_skip_previous"
+            android:tint="@color/white"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Previous"/>
+
+        <ImageButton
+            android:id="@+id/playButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_play_arrow"
+            android:tint="@color/spotify_black"
+            android:background="@drawable/bg_play_button"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Play"/>
+
+        <ImageButton
+            android:id="@+id/pauseButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_pause"
+            android:tint="@color/spotify_black"
+            android:background="@drawable/bg_play_button"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Pause"/>
+
+        <ImageButton
+            android:id="@+id/nextButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_skip_next"
+            android:tint="@color/white"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Next"/>
+
+    </LinearLayout>
+
+    <!-- Stop button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/stopButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:textColor="@color/white"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        app:strokeColor="@color/spotify_light_gray"
+        android:layout_marginBottom="16dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"/>
+
+    <!-- Song list -->
+    <ListView
+        android:id="@+id/songsListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@color/spotify_card"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>
