@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Music Player Navigation</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="profile">Profile</string>
+    <string name="my_music">My Music</string>
+    <string name="favorites">Favorites</string>
+    <string name="my_music_hint">Tap any song to open it in the Now Playing screen.</string>
+    <string name="favorites_hint">These are the favorite songs marked in the app.</string>
+    <string name="profile_picture">Profile picture</string>
+    <string name="profile_hobbies_title">Hobbies</string>
+    <string name="select_a_song_text">Select a Song</string>
+    <string name="prev_text">Prev</string>
+    <string name="next_text">Next</string>
+    <string name="play_text">Play</string>
+    <string name="pause_text">Pause</string>
+    <string name="stop_text">Stop</string>
+</resources>

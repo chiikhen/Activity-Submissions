@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="176dp"
+    android:background="?attr/colorPrimary"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.Material3.Dark">
+
+    <ImageView
+        android:layout_width="128dp"
+        android:layout_height="64dp"
+        android:contentDescription="@string/profile_picture"
+        android:padding="0dp"
+        android:src="@drawable/jinwoo" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/app_name"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Conchito Ledesma"
+        android:textColor="@color/black"/>
+
+</LinearLayout>
