@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">exercise-3_music-player</string>
+    <string name="menu_now_playing">Now Playing</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_my_music">My Music</string>
+    <string name="menu_favorites">Favorites</string>
+
+    <string name="profile_full_name">James Andrew Ocuaman</string>
+    <string name="profile_course">BS Information Technology</string>
+    <string name="profile_section">Section 3A</string>
+    <string name="profile_hobbies">Hobbies: Listening to OPM, coding Android apps, and basketball</string>
+    <string name="profile_picture_desc">Profile picture</string>
+
+    <string name="music_song_one">Song 1 - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3</string>
+    <string name="music_song_two">Song 2 - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3</string>
+    <string name="music_song_three">Song 3 - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3</string>
+    <string name="music_choose_prompt">Select a song to play</string>
+    <string name="music_play">Play</string>
+    <string name="music_pause">Pause</string>
+    <string name="music_prev">Prev</string>
+    <string name="music_next">Next</string>
+    <string name="music_prev_desc">Previous song</string>
+    <string name="music_next_desc">Next song</string>
+    <string name="music_play_pause_desc">Play or pause song</string>
+    <string name="music_add_to_favorites">Add to favorites</string>
+    <string name="music_toggle_favorites">Toggle favorites</string>
+    <string name="music_no_favorites">No favorites yet. Tap a heart in My Music to add songs.</string>
+
+    <string name="header_title">Music Drawer</string>
+    <string name="header_subtitle">Navigation Menu</string>
+</resources>
