@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/drawer_now_playing"
+        android:icon="@android:drawable/ic_menu_view"
+        android:title="Now Playing" />
+    <item
+        android:id="@+id/drawer_profile"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Profile" />
+</menu>

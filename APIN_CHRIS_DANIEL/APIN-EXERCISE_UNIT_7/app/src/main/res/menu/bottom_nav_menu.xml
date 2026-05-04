@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_my_music"
+        android:icon="@android:drawable/ic_media_play"
+        android:title="My Music" />
+    <item
+        android:id="@+id/navigation_favorites"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="Favorites" />
+</menu>
