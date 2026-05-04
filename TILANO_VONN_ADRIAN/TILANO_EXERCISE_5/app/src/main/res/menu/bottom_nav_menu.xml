@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/songListFragment"
+        android:title="My Music"
+        android:icon="@android:drawable/ic_media_play" />
+    <item
+        android:id="@+id/favoritesFragment"
+        android:title="Favorites"
+        android:icon="@android:drawable/btn_star_big_on" />
+</menu>
