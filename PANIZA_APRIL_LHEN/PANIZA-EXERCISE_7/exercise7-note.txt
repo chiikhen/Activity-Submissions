@@ -1,0 +1,6 @@
+Exercise 7 signed APK submitted.
+
+PS: This file was added to create a new commit so I could make a separate 
+pull request for Exercise 7. My previous submission was done 
+on the main branch, which automatically updated the existing PR instead 
+of creating a new one so idk why it happened. :<

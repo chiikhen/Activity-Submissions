@@ -1,0 +1,104 @@
+<resources>
+
+    <!-- ===== Base Application Theme ===== -->
+    <style name="Base.Theme.Exercise2_musicplayer" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- MD3 Color Roles -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+        <item name="colorSecondary">@color/accent</item>
+        <item name="colorOnSecondary">@color/on_primary</item>
+        <item name="colorTertiary">@color/accent_soft</item>
+        <item name="colorSurface">@color/surface_dark</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorError">#FF6B6B</item>
+        <item name="colorOutline">@color/divider</item>
+
+        <!-- Backgrounds -->
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+
+        <!-- Status Bar / Nav Bar -->
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/bottom_bar_bg</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- Typography -->
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Theme.Exercise2_musicplayer" parent="Base.Theme.Exercise2_musicplayer" />
+
+    <!-- ===== Button Styles ===== -->
+    <style name="PlayButton" parent="Widget.Material3.Button.IconButton">
+        <item name="android:textColor">@color/on_primary</item>
+        <item name="backgroundTint">@color/play_button</item>
+        <item name="iconTint">@color/on_primary</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="android:elevation">6dp</item>
+    </style>
+
+    <style name="ControlButton" parent="Widget.Material3.Button.TonalButton">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="backgroundTint">@color/control_button</item>
+        <item name="iconTint">@color/text_primary</item>
+        <item name="cornerRadius">50dp</item>
+    </style>
+
+    <!-- ===== Text Styles ===== -->
+    <style name="TextStyle.Header" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.02</item>
+    </style>
+
+    <style name="TextStyle.SectionLabel" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.12</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="TextStyle.SongTitle" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.SongArtist" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextStyle.PlayerSongTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextStyle.StatusLabel" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextStyle.TimeLabel" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">monospace</item>
+    </style>
+
+    <!-- ===== Card Styles ===== -->
+    <style name="SongCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/card_background</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="cardMaxElevation">6dp</item>
+    </style>
+
+</resources>

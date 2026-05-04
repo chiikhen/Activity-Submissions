@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:background="@android:color/transparent"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="20dp">
+
+    <!-- ===== Drag Handle (visual indicator) ===== -->
+    <View
+        android:layout_width="36dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="14dp"
+        android:background="@color/divider" />
+
+    <!-- ===== Top Row: Album Art + Song Info + Controls ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:layout_marginBottom="14dp">
+
+        <!-- Mini Album Art -->
+        <FrameLayout
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:background="@drawable/album_art_large"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_music_note"
+                android:contentDescription="@string/album_art_description"
+                app:tint="@color/white" />
+
+        </FrameLayout>
+
+        <!-- Song Title + Status -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="10dp">
+
+            <TextView
+                android:id="@+id/songTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/song_title_placeholder"
+                android:textColor="@color/text_primary"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:singleLine="true" />
+
+            <!-- Status with teal dot -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="3dp">
+
+                <View
+                    android:id="@+id/statusDot"
+                    android:layout_width="6dp"
+                    android:layout_height="6dp"
+                    android:background="@drawable/now_playing_indicator"
+                    android:layout_marginEnd="6dp" />
+
+                <TextView
+                    android:id="@+id/songStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/status_ready"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- ===== Player Controls ===== -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- Previous -->
+            <ImageButton
+                android:id="@+id/previousButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/control_button_selector"
+                android:src="@drawable/ic_skip_previous"
+                android:scaleType="center"
+                android:contentDescription="@string/btn_previous"
+                android:padding="8dp"
+                app:tint="@color/text_primary" />
+
+            <!-- Play (main CTA) -->
+            <ImageButton
+                android:id="@+id/playButton"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_marginHorizontal="6dp"
+                android:background="@drawable/play_button_selector"
+                android:src="@drawable/ic_play_arrow"
+                android:scaleType="center"
+                android:contentDescription="@string/btn_play"
+                android:elevation="6dp"
+                android:padding="12dp"
+                app:tint="@color/white" />
+
+            <!-- Pause -->
+            <ImageButton
+                android:id="@+id/pauseButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/control_button_selector"
+                android:src="@drawable/ic_pause"
+                android:scaleType="center"
+                android:contentDescription="@string/btn_pause"
+                android:padding="8dp"
+                app:tint="@color/text_primary" />
+
+            <!-- Next -->
+            <ImageButton
+                android:id="@+id/nextButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="4dp"
+                android:background="@drawable/control_button_selector"
+                android:src="@drawable/ic_skip_next"
+                android:scaleType="center"
+                android:contentDescription="@string/btn_next"
+                android:padding="8dp"
+                app:tint="@color/text_primary" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ===== Progress / Seek Row ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Current Time -->
+        <TextView
+            android:id="@+id/currentTime"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="@string/time_zero"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:gravity="start" />
+
+        <!-- SeekBar -->
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="8dp"
+            android:progressTint="@color/progress_indicator"
+            android:progressBackgroundTint="@color/progress_track"
+            android:thumbTint="@color/progress_thumb"
+            android:max="100"
+            android:progress="0"
+            android:minHeight="20dp" />
+
+        <!-- Total Time -->
+        <TextView
+            android:id="@+id/totalTime"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:text="@string/time_zero"
+            android:textColor="@color/text_secondary"
+            android:textSize="11sp"
+            android:fontFamily="monospace"
+            android:gravity="end" />
+
+        <!-- Stop Button (minimal) -->
+        <ImageButton
+            android:id="@+id/stopButton"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/control_button_selector"
+            android:src="@drawable/ic_stop"
+            android:scaleType="center"
+            android:contentDescription="@string/btn_stop"
+            android:padding="6dp"
+            app:tint="@color/text_secondary" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
