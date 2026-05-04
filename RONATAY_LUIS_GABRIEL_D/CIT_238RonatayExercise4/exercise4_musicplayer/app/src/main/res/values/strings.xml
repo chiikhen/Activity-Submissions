@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Elchupapo\'s Music Player</string>
+
+    <!-- Drawer Menu -->
+    <string name="menu_now_playing">Now Playing</string>
+    <string name="menu_profile">Profile</string>
+
+    <!-- Bottom Navigation -->
+    <string name="menu_my_music">My Music</string>
+    <string name="menu_favorites">Favorites</string>
+
+    <!-- Navigation -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Profile -->
+    <string name="profile_name">Luis Gabriel Ronatay</string>
+    <string name="profile_course">BS Information Technology</string>
+    <string name="profile_section">CIT-238</string>
+    <string name="profile_hobbies">Listening to Music, Playing Video Games, Coding, Basketball</string>
+
+    <!-- Headers -->
+    <string name="header_favorites">Favorites</string>
+    <string name="header_my_music">My Music</string>
+</resources>
