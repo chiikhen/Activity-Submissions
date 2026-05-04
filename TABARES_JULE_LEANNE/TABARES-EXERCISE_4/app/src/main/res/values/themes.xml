@@ -1,0 +1,26 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.Exercise2_musicplayer" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/spotify_green</item>
+        <item name="colorPrimaryVariant">@color/spotify_dark_green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/spotify_green</item>
+        <item name="colorOnSecondary">@color/text_primary</item>
+        <item name="android:colorBackground">@color/dark_background</item>
+        <item name="colorSurface">@color/dark_surface</item>
+        <item name="colorOnBackground">@color/text_primary</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="android:windowBackground">@color/dark_background</item>
+        <item name="android:windowAnimationStyle">@style/Exercise2WindowAnimation</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/light_pink</item>
+    </style>
+
+    <style name="Exercise2WindowAnimation">
+        <item name="android:activityOpenEnterAnimation">@anim/window_hold</item>
+        <item name="android:activityOpenExitAnimation">@anim/window_hold</item>
+        <item name="android:activityCloseEnterAnimation">@anim/window_hold</item>
+        <item name="android:activityCloseExitAnimation">@anim/window_hold</item>
+    </style>
+
+    <style name="Theme.Exercise2_musicplayer" parent="Base.Theme.Exercise2_musicplayer" />
+</resources>

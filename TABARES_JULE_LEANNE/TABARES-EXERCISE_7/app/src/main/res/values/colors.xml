@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_pink">#E64AAE</color>
+    <color name="hot_pink">#CC3F9D</color>
+    <color name="light_pink">#FDEAF6</color>
+    <color name="deep_rose">#7A2E65</color>
+    <color name="dark_background">#FFF7FC</color>
+    <color name="dark_surface">#FFF0F9</color>
+    <color name="text_primary">#2E2032</color>
+    <color name="text_secondary">#684F70</color>
+    <color name="text_tertiary">#92779A</color>
+    <color name="spotify_green">#E64AAE</color>
+    <color name="spotify_dark_green">#AB2E80</color>
+</resources>
