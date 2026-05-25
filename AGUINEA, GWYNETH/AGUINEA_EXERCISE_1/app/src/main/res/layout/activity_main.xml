@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_gray"
     style="@style/screen_layout_margin"
     tools:context=".MainActivity">
 
@@ -15,13 +16,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/first_name_text"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        app:boxStrokeColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/first_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -32,13 +37,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/last_name_text"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
+        app:boxStrokeColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/first_name_wrapper"
         app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/last_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -49,6 +58,7 @@
         android:layout_height="wrap_content"
         style="@style/button_greeting"
         android:text="@string/enter_button_text"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/last_name_wrapper"
         app:layout_constraintStart_toStartOf="parent"/>
 
@@ -57,6 +67,7 @@
         android:id="@+id/greeting_display"
         android:layout_width="match_parent"
         style="@style/greeting_display"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@id/enter_button"
         app:layout_constraintStart_toStartOf="parent"/>
 

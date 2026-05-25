@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.cit238aguineaexercise1" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+    </style>
+
+    <style name="Theme.cit238aguineaexercise1" parent="Base.Theme.cit238aguineaexercise1" />
+
     <style name="text_input_greeting" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_margin">8dp</item>
     </style>
@@ -7,6 +14,7 @@
     <style name="button_greeting">
         <item name="android:layout_margin">8dp</item>
         <item name="android:gravity">center</item>
+        <item name="backgroundTint">@color/hot_pink</item>
     </style>
 
     <style name="greeting_display" parent="@style/TextAppearance.MaterialComponents.Body1">

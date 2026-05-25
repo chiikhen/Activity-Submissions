@@ -11,12 +11,13 @@ import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
 
-//    List of songs
     private lateinit var songsListView: ListView
+    // Updated song list with Spotify tracks (formatted for your current ManageSong logic)
     private val songs = listOf(
-        "Song 1 - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-        "Song 2 - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-        "Song 3 - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+        "Blinding Lights - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+        "Stay - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+        "Heat Waves - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+        "Starboy - https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3"
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,29 +31,18 @@ class MainActivity : AppCompatActivity() {
             return@setOnApplyWindowInsetsListener insets
         }
 
-//        Setup the ListView
-//        You need an ArrayAdapter to connect the list of songs to the ListView
-//        Welcome to Android
-        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, songs)
+        // Using custom layout R.layout.list_item_song to support white text on dark background
+        val adapter = ArrayAdapter(this, R.layout.list_item_song, songs)
         songsListView = findViewById(R.id.songsListView)
         songsListView.adapter = adapter
 
-//        Put a click listener on the ListView to open the ManageSong activity when a song is clicked
-        // Put a click listener on the ListView to open the ManageSong activity when a song is clicked
+        // Click listener to open ManageSong
         songsListView.setOnItemClickListener { _, _, position, _ ->
-            // 1. Get the selected song string from your list using the position
             val selectedSong = songs[position]
-
-            // 2. Create an Intent to navigate to ManageSong
             val intent = Intent(this, ManageSong::class.java).apply {
-                // 3. Add the song data to the intent
-                putExtra("EXTRA_SONG_DATA", selectedSong) }
-
-            // 4. Start the activity
+                putExtra("EXTRA_SONG_DATA", selectedSong)
+            }
             startActivity(intent)
         }
-
-        }
     }
-
-
+}
